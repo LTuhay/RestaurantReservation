@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Data;
 using RestaurantReservation.Db.Models;
 using Table = RestaurantReservation.Db.Models.Table;
@@ -78,6 +79,7 @@ void DeleteCustomer(int customerId)
         context.SaveChanges();
     }
 }
+
 
 // RESTAURANT
 
@@ -259,6 +261,26 @@ void DeleteEmployee(int employeeId)
     }
 }
 
+List<Employee> ListManagers()
+{
+    return context.Employees.Where(e => e.Position == EmployeePosition.Manager)
+        .ToList();
+}
+
+decimal CalculateAverageOrderAmount(int employeeId)
+{
+    var orders = context.Orders
+        .Where(o => o.EmployeeId == employeeId)
+        .ToList();
+
+    if (orders.Count == 0)
+    {
+        return 0;
+    }
+
+    return orders.Average(o => o.TotalAmount);
+}
+
 // MENU ITEM
 
 var allMenuItems = GetAllMenuItems();
@@ -317,6 +339,17 @@ int CreateMenuItem(MenuItem menuItem)
         context.MenuItems.Remove(menuItem);
         context.SaveChanges();
     }
+}
+
+List<MenuItem> ListOrderedMenuItems(int reservationId)
+{
+    return context.OrderItems
+        .Where(oi => oi.Order.ReservationId == reservationId)
+        .Include(oi => oi.MenuItem)
+        .Select(oi => oi.MenuItem)
+        .Distinct()
+        .ToList();
+
 }
 
 // RESERVATION
@@ -382,6 +415,13 @@ void DeleteReservation(int reservationId)
     }
 }
 
+List<Reservation> GetReservationsByCustomer(int customerId)
+{
+    return context.Reservations
+        .Where(r => r.CustomerId == customerId)
+        .ToList();
+}
+
 // ORDER
 
 var allOrders = GetAllOrders();
@@ -441,6 +481,15 @@ int CreateOrder(Order order)
     }
 }
 
+List<Order> ListOrdersAndMenuItems(int reservationId)
+{
+    return context.Orders
+        .Where(o => o.ReservationId == reservationId)
+        .Include(o => o.OrderItems)
+        .ThenInclude(oi => oi.MenuItem)
+        .ToList();
+}
+
 // ORDER ITEM
 
 var allOrderItems = GetAllOrderItems();
@@ -497,4 +546,10 @@ void DeleteOrderItem(int orderItemId)
         context.SaveChanges();
     }
 }
+
+
+
+
+
+
 
