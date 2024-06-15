@@ -17,7 +17,7 @@ namespace RestaurantReservation.Db.Models
         public string LastName { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(50)]
         public string Email { get; set; }
 
         [Required]

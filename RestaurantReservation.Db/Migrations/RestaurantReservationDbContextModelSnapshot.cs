@@ -32,8 +32,8 @@ namespace RestaurantReservation.Db.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -73,10 +73,8 @@ namespace RestaurantReservation.Db.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Position")
+                        .HasColumnType("int");
 
                     b.Property<int>("RestaurantId")
                         .HasColumnType("int");
@@ -90,11 +88,11 @@ namespace RestaurantReservation.Db.Migrations
 
             modelBuilder.Entity("RestaurantReservation.Db.Models.MenuItem", b =>
                 {
-                    b.Property<int>("ItemId")
+                    b.Property<int>("MenuItemId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuItemId"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -112,7 +110,7 @@ namespace RestaurantReservation.Db.Migrations
                     b.Property<int>("RestaurantId")
                         .HasColumnType("int");
 
-                    b.HasKey("ItemId");
+                    b.HasKey("MenuItemId");
 
                     b.HasIndex("RestaurantId");
 
@@ -136,9 +134,6 @@ namespace RestaurantReservation.Db.Migrations
                     b.Property<int>("ReservationId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("OrderId");
 
                     b.HasIndex("EmployeeId");
@@ -156,10 +151,7 @@ namespace RestaurantReservation.Db.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
 
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MenuItemItemId")
+                    b.Property<int>("MenuItemId")
                         .HasColumnType("int");
 
                     b.Property<int>("OrderId")
@@ -170,7 +162,7 @@ namespace RestaurantReservation.Db.Migrations
 
                     b.HasKey("OrderItemId");
 
-                    b.HasIndex("MenuItemItemId");
+                    b.HasIndex("MenuItemId");
 
                     b.HasIndex("OrderId");
 
@@ -310,7 +302,7 @@ namespace RestaurantReservation.Db.Migrations
                 {
                     b.HasOne("RestaurantReservation.Db.Models.MenuItem", "MenuItem")
                         .WithMany("OrderItems")
-                        .HasForeignKey("MenuItemItemId")
+                        .HasForeignKey("MenuItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -21,9 +21,14 @@ namespace RestaurantReservation.Db.Models
         [Required]
         public DateTime OrderDate { get; set; }
 
-        [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal TotalAmount { get; set; }
+        [NotMapped]
+        public decimal TotalAmount
+        {
+            get
+            {
+                return OrderItems?.Sum(oi => oi.Quantity * oi.MenuItem.Price) ?? 0;
+            }
+        }
 
         public ICollection<OrderItem> OrderItems { get; set; }
     }

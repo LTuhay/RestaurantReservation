@@ -22,8 +22,7 @@ namespace RestaurantReservation.Db.Models
         public string LastName { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string Position { get; set; }
+        public EmployeePosition Position { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }

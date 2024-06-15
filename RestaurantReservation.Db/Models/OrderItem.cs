@@ -14,7 +14,7 @@ namespace RestaurantReservation.Db.Models
         public Order Order { get; set; }
 
         [Required]
-        public int ItemId { get; set; }
+        public int MenuItemId { get; set; }
         public MenuItem MenuItem { get; set; }
 
         [Required]
