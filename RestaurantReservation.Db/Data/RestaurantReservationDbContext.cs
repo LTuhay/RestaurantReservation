@@ -14,6 +14,10 @@ namespace RestaurantReservation.Db.Data
         public DbSet<Table> Tables { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
 
+        public DbSet<EmployeeWithRestaurant> EmployeesWithRestaurants { get; set; }
+
+        public DbSet<ReservationWithDetails> ReservationsWithDetails { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-4J9GHFA;Database=RestaurantReservationCore;Trusted_Connection=True;TrustServerCertificate=True;");
@@ -22,6 +26,14 @@ namespace RestaurantReservation.Db.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ReservationWithDetails>()
+            .HasNoKey()
+            .ToView("vwReservationsWithDetails");
+
+            modelBuilder.Entity<EmployeeWithRestaurant>()
+            .HasNoKey()
+            .ToView("vwEmployeesWithRestaurants");
+
             modelBuilder.Entity<Customer>().HasData(
                 new Customer { CustomerId = 1, FirstName = "John", LastName = "Doe", Email = "john.doe@example.com", PhoneNumber = "123-456-7890" },
                 new Customer { CustomerId = 2, FirstName = "Jane", LastName = "Smith", Email = "jane.smith@example.com", PhoneNumber = "098-765-4321" },

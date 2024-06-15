@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Data;
+using RestaurantReservation.Db.Migrations;
 using RestaurantReservation.Db.Models;
 using Table = RestaurantReservation.Db.Models.Table;
 
@@ -281,6 +282,13 @@ decimal CalculateAverageOrderAmount(int employeeId)
     return orders.Average(o => o.TotalAmount);
 }
 
+List<EmployeeWithRestaurant> ListEmployeesWithRestaurants()
+{
+    return context.EmployeesWithRestaurants.ToList();
+}
+
+
+
 // MENU ITEM
 
 var allMenuItems = GetAllMenuItems();
@@ -421,6 +429,13 @@ List<Reservation> GetReservationsByCustomer(int customerId)
         .Where(r => r.CustomerId == customerId)
         .ToList();
 }
+
+List<ReservationWithDetails> GetReservationsWithDetails()
+{
+    return context.ReservationsWithDetails.ToList();
+}
+
+
 
 // ORDER
 
