@@ -14,6 +14,12 @@ namespace RestaurantReservation.Db.Data
         public DbSet<Table> Tables { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-4J9GHFA;Database=RestaurantReservationCore;Trusted_Connection=True;TrustServerCertificate=True;");
+
+        }
 
     }
+
 }
