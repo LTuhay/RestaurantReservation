@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Models;
 
 namespace RestaurantReservation.Db.Data
@@ -32,6 +33,14 @@ namespace RestaurantReservation.Db.Data
                 .FirstOrDefault();
 
             return totalRevenue;
+        }
+
+        public List<Customer> FindCustomersWithLargeReservations(int minPartySize)
+        {
+            var parameter = new SqlParameter("@MinPartySize", minPartySize);
+            return this.Customers
+                .FromSqlRaw("EXEC dbo.FindCustomersWithLargeReservations @MinPartySize", parameter)
+                .ToList();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

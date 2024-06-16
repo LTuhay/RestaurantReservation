@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Data;
 using RestaurantReservation.Db.Migrations;
@@ -81,6 +82,11 @@ void DeleteCustomer(int customerId)
         context.Customers.Remove(customer);
         context.SaveChanges();
     }
+}
+
+ List<Customer> FindCustomersWithLargeReservations(int minPartySize)
+{
+    return context.FindCustomersWithLargeReservations(minPartySize);
 }
 
 
