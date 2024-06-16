@@ -24,6 +24,16 @@ namespace RestaurantReservation.Db.Data
 
         }
 
+        public decimal GetTotalRevenue(int restaurantId)
+        {
+            var totalRevenue = this.Database
+                .SqlQuery<decimal>($"SELECT dbo.CalculateTotalRevenue({restaurantId})")
+                .AsEnumerable()
+                .FirstOrDefault();
+
+            return totalRevenue;
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ReservationWithDetails>()

@@ -7,6 +7,8 @@ using Table = RestaurantReservation.Db.Models.Table;
 
 var context = new RestaurantReservationDbContext();
 
+Console.WriteLine(GetTotalRevenue(1));
+
 // CUSTOMER
 
 var allCustomers = GetAllCustomers();
@@ -144,6 +146,12 @@ void DeleteRestaurant(int restaurantId)
     }
 }
 
+decimal GetTotalRevenue(int restaurantId)
+{
+    return context.GetTotalRevenue(1);
+
+}
+
 // TABLE
 
 var allTables = GetAllTables();
@@ -157,7 +165,7 @@ foreach (var table in allTables)
     Console.WriteLine();
 }
 
-var tableSample = new Table {RestaurantId = 1, Capacity = 4 };
+var tableSample = new Table { RestaurantId = 1, Capacity = 4 };
 
 int tableId = CreateTable(tableSample);
 
@@ -325,7 +333,7 @@ int CreateMenuItem(MenuItem menuItem)
     return menuItem.MenuItemId;
 }
 
- void UpdateMenuItem(MenuItem menuItem)
+void UpdateMenuItem(MenuItem menuItem)
 {
     var existingMenuItem = context.MenuItems.Find(menuItem.MenuItemId);
     if (existingMenuItem != null)
@@ -339,7 +347,7 @@ int CreateMenuItem(MenuItem menuItem)
     }
 }
 
- void DeleteMenuItem(int menuItemId)
+void DeleteMenuItem(int menuItemId)
 {
     var menuItem = context.MenuItems.Find(menuItemId);
     if (menuItem != null)
@@ -380,7 +388,7 @@ var reservationSample = new Reservation { CustomerId = 1, RestaurantId = 1, Tabl
 
 int reservationId = CreateReservation(reservationSample);
 
-var reservationSampleUpdate = new Reservation {ReservationId = reservationId, CustomerId = 1, RestaurantId = 3, TableId = 1, ReservationDate = DateTime.Now.AddDays(1), PartySize = 2 };
+var reservationSampleUpdate = new Reservation { ReservationId = reservationId, CustomerId = 1, RestaurantId = 3, TableId = 1, ReservationDate = DateTime.Now.AddDays(1), PartySize = 2 };
 
 UpdateReservation(reservationSampleUpdate);
 DeleteReservation(reservationId);
@@ -406,7 +414,7 @@ void UpdateReservation(Reservation reservation)
         existingReservation.CustomerId = reservation.CustomerId;
         existingReservation.RestaurantId = reservation.RestaurantId;
         existingReservation.TableId = reservation.TableId;
-        existingReservation.ReservationDate = reservation. ReservationDate;
+        existingReservation.ReservationDate = reservation.ReservationDate;
         existingReservation.PartySize = reservation.PartySize;
         existingReservation.Orders = reservation.Orders;
         context.SaveChanges();
@@ -473,7 +481,7 @@ int CreateOrder(Order order)
     return order.OrderId;
 }
 
- void UpdateOrder(Order order)
+void UpdateOrder(Order order)
 {
     var existingOrder = context.Orders.Find(order.OrderId);
     if (existingOrder != null)
@@ -486,7 +494,7 @@ int CreateOrder(Order order)
     }
 }
 
- void DeleteOrder(int orderId)
+void DeleteOrder(int orderId)
 {
     var order = context.Orders.Find(orderId);
     if (order != null)
@@ -545,7 +553,7 @@ void UpdateOrderItem(OrderItem orderItem)
     var existingOrderItem = context.OrderItems.Find(orderItem.OrderItemId);
     if (existingOrderItem != null)
     {
-        existingOrderItem.OrderId  = orderItem.OrderId;
+        existingOrderItem.OrderId = orderItem.OrderId;
         existingOrderItem.MenuItemId = orderItem.MenuItemId;
         existingOrderItem.Quantity = orderItem.Quantity;
         context.SaveChanges();
