@@ -1,10 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\loren\\source\\repos\\RestaurantReservation\\",
+  "WorkspaceRootPath": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B65B9A08-123B-40D4-AAB2-E07B1F97F893}|RestaurantReservation.csproj|c:\\users\\loren\\source\\repos\\restaurantreservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B65B9A08-123B-40D4-AAB2-E07B1F97F893}|RestaurantReservation.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65B9A08-123B-40D4-AAB2-E07B1F97F893}|RestaurantReservation.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65B9A08-123B-40D4-AAB2-E07B1F97F893}|RestaurantReservation.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation\\printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65B9A08-123B-40D4-AAB2-E07B1F97F893}|RestaurantReservation.csproj|solutionrelative:printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\ireservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\restaurantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\menuitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF59E12-DA0B-4608-84A4-4B27D6970ABE}|..\\RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\loren\\source\\repos\\restaurantreservationsolution\\restaurantreservation.db\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +45,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Printer.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation\\Printer.cs",
+              "RelativeDocumentMoniker": "Printer.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation\\Printer.cs",
+              "RelativeToolTip": "Printer.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAUwJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:10:35.028Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservation\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservation\\Program.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAAAKwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:37:02.089Z",
+              "WhenOpened": "2024-06-17T15:03:48.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\IReservationRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\IReservationRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\IReservationRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\IReservationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:59.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\TableRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\TableRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\TableRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\TableRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:49.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RestaurantRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\RestaurantRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\RestaurantRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\RestaurantRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\RestaurantRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:41.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:25.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\OrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:18.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\OrderItemRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\OrderItemRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\OrderItemRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\OrderItemRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:09.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\MenuItemRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\MenuItemRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\MenuItemRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\MenuItemRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:02:00.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:01:47.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "..\\RestaurantReservation.Db\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\loren\\source\\repos\\RestaurantReservationSolution\\RestaurantReservation.Db\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "..\\RestaurantReservation.Db\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:01:25.31Z",
               "EditorCaption": ""
             }
           ]
